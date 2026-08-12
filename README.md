@@ -3,13 +3,14 @@ Team ZeroDay
 
 Transformer-based semantic segmentation for complex off-road environments using a DINOv2 Vision Transformer backbone.
 
-Project Overview
+->Project Overview
 
 This project focuses on semantic scene segmentation in challenging off-road environments.
 We leverage a self-supervised pretrained DINOv2 Vision Transformer (ViT-S/14) as a frozen backbone and train a custom convolutional decoder for accurate pixel-wise classification.
 
 The system classifies each pixel into 10 semantic terrain/object classes, enabling robust perception for autonomous off-road navigation.
-Key Features
+
+->Key Features
 
  Transformer-based global feature extraction
  ConvNeXt-style segmentation head
@@ -18,14 +19,14 @@ Key Features
 Training curve visualization
 Modular PyTorch training script
 
- Final Performance
+-> Final Performance
 Metric	Value
 Best Epoch	29
 Final Validation IoU	0.4952
 Validation Dice Score	0.65
 mAP@50	0.65
 Validation Pixel Accuracy	0.80
- Dataset Structure
+ ->Dataset Structure
 Offroad_Segmentation_Training_Dataset/
 ├── train/
 │   ├── Color_Images/
@@ -38,7 +39,7 @@ Offroad_Segmentation_Training_Dataset/
 
 Custom raw pixel-to-class mapping
 
- Model Architecture
+ -> Model Architecture
 Backbone
 
 DINOv2 ViT-S/14
@@ -57,7 +58,7 @@ GELU activation
 
 Final 1×1 convolution for 10-class output
 
- Training Configuration
+ -> Training Configuration
 
 Optimizer: SGD (momentum = 0.9)
 
@@ -71,12 +72,12 @@ Loss Function:
 
 Total Loss = CrossEntropy + 0.5 × Dice Loss
 
-Installation
+-> Installation
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
 pip install -r requirements.txt
 
-Required libraries:
+-> Required libraries:
 
 torch
 
@@ -98,7 +99,7 @@ Update dataset paths inside train.py, then run:
 
 python train.py
 
-Outputs:
+-> Outputs:
 
 Trained model: segmentation_head.pth
 
@@ -118,7 +119,7 @@ Pixel Accuracy
 
 mAP@50
 
- Future Improvements
+ -> Future Improvements
 
 Backbone fine-tuning
 
@@ -128,7 +129,7 @@ Class-weighted loss
 
 Real-time optimization for deployment
 
- Team ZeroDay
+ -> Team ZeroDay
 
 A. Lokeswar Reddy (Team Leader)
 
@@ -138,7 +139,7 @@ C. Koushik Reddy
 
 C. H. Shanmuka Padmanabha Reddy
 
- Declaration
+ -> Declaration
 
 This project is original work completed by Team ZeroDay.
 Test images were not used during training or validation.
